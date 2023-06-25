@@ -13,17 +13,17 @@ defmodule Api.Application do
         scheme: :http,
         plug: Api.Router,
         options: [
-          port: 10080,
-          ip: {127,0,0,1},
+          port: 10_080,
+          ip: {127, 0, 0, 1}
           # ip: {0,0,0,0},
-        ],
+        ]
       },
       {
         Mongo,
         [
           name: :api,
           pool_size: 10,
-          url: "mongodb://127.0.0.1/api",
+          url: "mongodb://127.0.0.1/api"
 
           # url: "mongodb://username:password@127.0.0.1/api?params=here",
           # or
@@ -41,7 +41,7 @@ defmodule Api.Application do
           #   cacertfile: "...",
           #   certfile: "...")
           # ],
-        ],
+        ]
       }
     ]
 

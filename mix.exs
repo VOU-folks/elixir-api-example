@@ -22,9 +22,10 @@ defmodule Api.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:plug_cowboy, "~> 2.0"},
       {:jason, "~> 1.4"},
-      {:mongodb_driver, "~> 1.0.0"},
+      {:mongodb_driver, "~> 1.0.0"}
     ]
   end
 end

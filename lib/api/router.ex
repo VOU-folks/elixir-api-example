@@ -16,10 +16,13 @@ defmodule Api.Router do
 
   get "/" do
     conn = put_resp_content_type(conn, "application/json")
-    send_resp(conn, 200,
+
+    send_resp(
+      conn,
+      200,
       Jason.encode!(%{
         :app => "api-example",
-        :version => "0.0.1",
+        :version => "0.0.1"
       })
     )
   end
