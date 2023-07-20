@@ -1,5 +1,4 @@
 defmodule Api.Router do
-  alias Mongo.InsertOneResult
   use Plug.Router
 
   plug(Plug.Logger)

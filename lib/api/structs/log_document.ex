@@ -8,7 +8,7 @@ defmodule LogDocument do
   defstruct @fields
 
   defimpl Mongo.Encoder do
-    @spec encode(%__MODULE__{}) :: %{_id: BSON.ObjectId.t(), ip: String.t(), time: DateTime.t()}
+    @spec encode(LogDocument) :: %{_id: BSON.ObjectId.t(), ip: String.t(), time: DateTime.t()}
     def encode(%LogDocument{_id: id, ip: ip, time: time}) do
       %{
         _id: id,
